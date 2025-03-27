@@ -7,11 +7,11 @@ import Haval
 def show_menu():
     menu = f"""
 {GREEN}{BOLD}Available Tools:{RESET}
-
-    {GREEN}{BOLD}1{RESET}) Network Scanner - Detect live hosts on the network
-    {GREEN}{BOLD}2{RESET}) Port Scanner    - Detect open ports
+================
+  {GREEN}{BOLD}1{RESET}) Network Scanner - Detect live hosts on the network
+  {GREEN}{BOLD}2{RESET}) Port Scanner    - Detect open ports
     
-Type {GREEN}{BOLD}'Back'{RESET} or {GREEN}{BOLD}'Ctrl + C'{RESET} to the main menu.
+Type {GREEN}{BOLD}'Back'{RESET} or {GREEN}{BOLD}'Ctrl + C'{RESET} to the main menu
     """
     while True:
         Haval.show_banner()

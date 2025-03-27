@@ -1,4 +1,3 @@
-# ANSI escape colors
 BLUE = "\033[00;34m"
 PURPLE = "\033[00;35m"
 GREEN = "\033[00;32m"

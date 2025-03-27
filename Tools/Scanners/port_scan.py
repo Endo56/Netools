@@ -47,8 +47,8 @@ def port_scan(target):
     print(f"{GREEN}{BOLD}PORT     SERVICE       STATUS     VERSION{RESET}")
     for port, service, state, version in results:
         print("{:<8} {:<13} {:<10} {:<8}".format(port, service, state, version))
-    print(f"\n{YELLOW}{BOLD}[!]{RESET} Done! scanned in {elapsed_time:.2f} seconds")
-    input(f"Press {GREEN}{BOLD}[ENTER]{RESET} to return to the menu.")
+    print(f"\n{GREEN}{BOLD}[+]{RESET} Done! scanned in {elapsed_time:.2f} seconds")
+    input(f"Press {GREEN}{BOLD}[ENTER]{RESET} to return to the menu")
 
 def main():
     show_banner()

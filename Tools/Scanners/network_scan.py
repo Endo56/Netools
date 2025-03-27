@@ -2,7 +2,6 @@ from colors import *
 import netifaces
 import tabulate
 import nmap
-import time
 import os
 
 
@@ -58,13 +57,10 @@ def alive_hosts_scan():
     print(f"\n{BLUE}{BOLD}[*]{RESET} Scanning hosts... ({scan_range})")
 
     nm = nmap.PortScanner()
-    start_time = time.time()
     try:
         nm.scan(hosts=scan_range, arguments='-O -sS -T5')
     except KeyboardInterrupt:
         return
-    end_time = time.time()
-    elapsed_time = end_time - start_time
 
     alive_hosts = []
     for host in nm.all_hosts():
@@ -90,13 +86,12 @@ def alive_hosts_scan():
             alive_hosts.append(host_info)
 
     if alive_hosts:
-        print(f"\n[{GREEN}{BOLD}+{RESET}] {GREEN}{BOLD}Alive hosts found:{RESET}")
+        print(f"\n{GREEN}{BOLD}[+]{RESET} Alive hosts found:")
         print(tabulate.tabulate(alive_hosts, headers="keys", tablefmt="fancy_grid"))
-        print(f"\n{YELLOW}{BOLD}[!]{RESET} Done! scanned in {elapsed_time:.2f} seconds")
-        input(f"Press {GREEN}{BOLD}[ENTER]{RESET} to return to the menu.")
+        input(f"Press {GREEN}{BOLD}[ENTER]{RESET} to return to the menu")
     else:
         print(f"{RED}{BOLD}[-]{RESET} No alive hosts found.")
-        input(f"\nPress {GREEN}{BOLD}[ENTER]{RESET} to return to the menu.")
+        input(f"\nPress {GREEN}{BOLD}[ENTER]{RESET} to return to the menu")
 
 def main():
     while True:

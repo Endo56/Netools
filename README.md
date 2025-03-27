@@ -11,12 +11,12 @@ This is a small framework created for the purpose of studying networks.
 
 # Installation:
 
-Download and enter the Setup directory:
+Download and enter the Setup directory
 ```
-git clone https://github.com/wasc/Haval.git
+git clone https://github.com/Endo65/Haval.git
 cd Haval/Setup/
 ```
-Execute the installer with sudo:
+Execute the installer with sudo
 ```
 sudo python install.py
 ```
