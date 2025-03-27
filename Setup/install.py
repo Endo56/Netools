@@ -6,7 +6,7 @@ import time
 
 
 if os.geteuid() != 0:
-    print(f"{RED}{BOLD}[ERROR]{RESET} This script must be run as Root.")
+    print(f"{RED}{BOLD}[-]{RESET} This script must be run as Root.")
     sys.exit(1)
 
 def main():
@@ -15,14 +15,14 @@ def main():
  ═════════════════════════════════════════════════════════════         
                      Haval v1.0 installer     
  ══════════════════════════════╦══════════════════════════════   
-        [Author]: @wasc        ║   [Updated]: 2025|03|04  
+        [Author]: @Endo65      ║   [Updated]: 2025|03|27  
  ══════════════════════════════╩══════════════════════════════
 """)
     try:
-        choice = str(input(f"{YELLOW}{BOLD}[?]{RESET} {BOLD}Would you like to proceed with the installation? Y/N: {RESET}")).lower()
+        choice = str(input(f"{YELLOW}{BOLD}[?]{RESET} Would you like to proceed with the installation? Y/N: ")).lower()
 
         if choice.startswith("y"):
-            print(f"\n{BLUE}[*]{RESET} {GREEN}Installing required packages...{RESET}\n")
+            print(f"\n{BLUE}{BOLD}[*]{RESET} Installing required packages...\n")
             time.sleep(0.5)
             try:
                 os.system("apt update")
@@ -32,15 +32,15 @@ def main():
                 print(f"{RED}{BOLD}[-]{RESET} Installation aborted.")
                 sys.exit(1)
             if result == 0:
-                print(f"\n{YELLOW}[!]{RESET} Successfully Installed!\n")
+                print(f"\n{YELLOW}{BOLD}[!]{RESET} Successfully Installed!\n")
             else:
                 print(f"\n{RED}{BOLD}[ERROR]{RESET} Installation failed. Please check the error messages.\n{RESET}")
                 sys.exit(1)
         elif choice.startswith("n"):
-            print(f"\n{RED}[-]{RESET} {BOLD}Installation aborted.\n{RESET}")
+            print(f"\n{RED}{BOLD}[-]{RESET} Installation aborted.\n")
             sys.exit(1)
         else:
-            input(f"{RED}[-]{RESET} {BOLD}Wrong choice! Press [ENTER] to continue.{RESET}")
+            input(f"{RED}{BOLD}[-]{RESET} Wrong choice! Press [ENTER] to continue.")
             main()
     except KeyboardInterrupt:
         print(f"\n{RED}{BOLD}[-]{RESET} Installation aborted.\n")

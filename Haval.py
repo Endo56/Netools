@@ -6,7 +6,7 @@ import os
 
 
 if os.geteuid() != 0:
-    print(f"{RED}{BOLD}[ERROR]{RESET} Haval framework must be run as Root.")
+    print(f"{RED}{BOLD}[-]{RESET} Haval framework must be run as Root.")
     sys.exit(1)
 
 def show_menu():
