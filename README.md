@@ -13,14 +13,14 @@ This is a small framework created for the purpose of studying networks.
 
 Download and enter the Setup directory
 ```
-git clone https://github.com/Endo65/Haval.git
-cd Haval/Setup/
+git clone https://github.com/Endo65/Netools.git
+cd Netools/Setup/
 ```
-Execute the installer with sudo
+Execute the installer 
 ```
 sudo python install.py
 ```
-Run Haval.py with sudo
+Run netools.py
 ```
-sudo python Haval.py
+python netools.py
 ```

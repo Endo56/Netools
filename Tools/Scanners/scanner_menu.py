@@ -1,7 +1,7 @@
 from Tools.Scanners import network_scan
 from Tools.Scanners import port_scan
 from colors import *
-import Haval
+import Netools
 
 
 def show_menu():
@@ -14,10 +14,10 @@ def show_menu():
 Type {GREEN}{BOLD}'Back'{RESET} or {GREEN}{BOLD}'Ctrl + C'{RESET} to the main menu
     """
     while True:
-        Haval.show_banner()
+        Netools.show_banner()
         print(menu)
         try:
-            choice = input("Haval/Scan > ").lower()
+            choice = input("Netools/Scan > ").lower()
         except KeyboardInterrupt:
             return
 

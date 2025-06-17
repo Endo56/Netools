@@ -99,7 +99,7 @@ def main():
         show_network_details()
         show_menu()
         try:
-            choice = input("Haval/Scan > ").lower()
+            choice = input("Netools/Scan > ").lower()
         except KeyboardInterrupt:
             return
         

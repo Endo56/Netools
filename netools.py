@@ -5,10 +5,6 @@ import sys
 import os
 
 
-if os.geteuid() != 0:
-    print(f"{RED}{BOLD}[-]{RESET} Haval must be run as Root.")
-    sys.exit(1)
-
 def show_menu():
     menu = f"""
 {GREEN}{BOLD}Available Commands:{RESET}
@@ -40,14 +36,13 @@ Commands:
 
 def show_banner():
     os.system('clear')
-    banner = rf"""{GREEN}          _______           _______  _       
-|\     /|(  ___  )|\     /|(  ___  )( \      
-| )   ( || (   ) || )   ( || (   ) || (      
-| (___) || (___) || |   | || (___) || |      
-|  ___  ||  ___  |( (   ) )|  ___  || |      
-| (   ) || (   ) | \ \_/ / | (   ) || |      
-| )   ( || )   ( |  \   /  | )   ( || (____/\
-|/     \||/     \|   \_/   |/     \|(_______/{RESET}
+    banner = rf"""{GREEN}              
+███╗   ██╗███████╗████████╗ ██████╗  ██████╗ ██╗     ███████╗
+████╗  ██║██╔════╝╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝
+██╔██╗ ██║█████╗     ██║   ██║   ██║██║   ██║██║     ███████╗
+██║╚██╗██║██╔══╝     ██║   ██║   ██║██║   ██║██║     ╚════██║
+██║ ╚████║███████╗   ██║   ╚██████╔╝╚██████╔╝███████╗███████║
+╚═╝  ╚═══╝╚══════╝   ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝{RESET}
  
 - Version 1.0 -"""
     print(banner)
@@ -57,7 +52,7 @@ def main():
         show_banner()
         show_menu()
         try: 
-            command = input("\nHaval > ").lower()
+            command = input("\nNetools > ").lower()
         except KeyboardInterrupt:
             print()
             sys.exit(1)
