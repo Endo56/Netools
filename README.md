@@ -18,7 +18,7 @@ cd Netools/Setup/
 ```
 Execute the installer 
 ```
-sudo python install.py
+python install.py
 ```
 Run netools.py
 ```
